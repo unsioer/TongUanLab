@@ -1,6 +1,6 @@
 <template>
 <div class="content">
-    <img id="logo" alt="TongUan logo" height="250" src="../assets/logo.png">
+    <img id="logo" alt="TongUan logo" height="245" src="../assets/logo.png">
     <h2>{{ welcome }}</h2>
     <h3>{{ projects }}</h3>
     <ul>
@@ -22,19 +22,19 @@ export default {
         setEn() {
             this.welcome = "Welcome to Tong-uán Lab";
             this.projects = "Projects";
-            this.unlui= "Ūn-luī 韻彙";
+            this.unlui = "Ūn-luī 韻彙";
             this.unlui_description = ": A Hokkien dictionary.";
         },
         setZht() {
             this.welcome = "歡迎光臨東苑實驗室";
             this.projects = "項目";
-            this.unlui= "Ūn-luī 韻彙";
+            this.unlui = "Ūn-luī 韻彙";
             this.unlui_description = "：閩南語字辭典";
         },
         setZhs() {
             this.welcome = "欢迎光临东苑实验室";
             this.projects = "项目";
-            this.unlui= "Ūn-luī 韵汇";
+            this.unlui = "Ūn-luī 韵汇";
             this.unlui_description = "：闽南语字辞典";
         },
     }

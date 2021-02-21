@@ -5,8 +5,8 @@
             <el-row type="flex" class="row-container">
                 <el-col :span="6">
                     <el-link style="float: left;">
-                        <el-button type="text" style="">
-                            <span style="margin-block: auto; color: black; font-size: 1.5em;">{{ title }}</span>
+                        <el-button type="text" style="margin-top: 5px;  margin-bottom: 5px; ">
+                            <span style="margin-top: 10px;  margin-bottom: 10px; margin-block: auto; color: black; font-size: 1.5em;">{{ title }}</span>
                         </el-button>
                     </el-link>
                 </el-col>
