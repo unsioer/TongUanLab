@@ -1,21 +1,38 @@
 <template>
 <div id="app">
-    <img id="logo" alt="TongUan logo" src="./assets/logo.png">
-    <TongUanProjects msg="Welcome to Tong-uán Lab" />
-    <Footer msg="" />
+    <Menu />
+    <Content ref="content" />
+    <Footer ref="footer" />
 
 </div>
 </template>
 
 <script>
-import TongUanProjects from './components/TongUanProjects.vue'
+import Menu from './components/Menu.vue'
+import Content from './components/Content.vue'
 import Footer from './components/Footer.vue'
 
 export default {
     name: 'app',
     components: {
-        TongUanProjects,
+        Content,
         Footer,
+        Menu
+    },
+    methods: {
+        changeLanguage(command) {
+            if (command == "zh-hant") {
+                this.$refs.content.setZht();
+                this.$refs.footer.setZht();
+            }
+            if (command == "zh-hans") {
+                this.$refs.content.setZhs();
+                this.$refs.footer.setZhs();
+            } else if (command == "en") {
+                this.$refs.content.setEn();
+                this.$refs.footer.setEn();
+            }
+        }
     }
 }
 </script>
@@ -28,13 +45,5 @@ export default {
     text-align: center;
     color: #2c3e50;
     margin-top: 60px;
-}
-
-#logo {
-    height: 275px;
-    border-radius: 50%;
-    background-color: #46cba4;
-    margin-top: 2em;
-    margin-bottom: 2em;
 }
 </style>
