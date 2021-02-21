@@ -6,12 +6,12 @@
                 <el-col :span="6">
                     <el-link style="float: left;">
                         <el-button type="text" style="">
-                            <h1 style="margin-block: auto; color: black;">{{ title }}</h1>
+                            <span style="margin-block: auto; color: black; font-size: 1.5em;">{{ title }}</span>
                         </el-button>
                     </el-link>
                 </el-col>
                 <el-col :span="6" :offset="12">
-                    <el-dropdown @command="handleCommand" style="display:flex;">
+                    <el-dropdown @command="handleCommand"  trigger="click" style="display:flex;">
                         <div style="margin-left: auto;">
                             <span style="margin-right: 2.5px">{{ language }}</span>
                             <i class="el-icon-caret-bottom"></i>
@@ -19,7 +19,7 @@
                         <el-dropdown-menu slot="dropdown" style="text-align:center;">
                             <el-dropdown-item command="en">English</el-dropdown-item>
                             <el-dropdown-item command="zh-hant">繁體中文</el-dropdown-item>
-							<el-dropdown-item command="zh-hans">简体中文</el-dropdown-item>
+                            <el-dropdown-item command="zh-hans">简体中文</el-dropdown-item>
                         </el-dropdown-menu>
                     </el-dropdown>
                 </el-col>
@@ -41,7 +41,7 @@ export default {
         handleCommand(command) {
             if (command == "zh-hant") {
                 this.setZht();
-			} else if (command == "zh-hans") {
+            } else if (command == "zh-hans") {
                 this.setZhs();
             } else if (command == "en") {
                 this.setEn();
@@ -50,17 +50,17 @@ export default {
         setEn() {
             this.title = "Tong-uán Lab";
             this.language = "Language";
-			this.$parent.changeLanguage("en");
+            this.$parent.changeLanguage("en");
         },
         setZht() {
             this.title = "東苑實驗室";
             this.language = "語言";
-			this.$parent.changeLanguage("zh-hant");
+            this.$parent.changeLanguage("zh-hant");
         },
-		setZhs() {
+        setZhs() {
             this.title = "东苑实验室";
             this.language = "语言";
-			this.$parent.changeLanguage("zh-hans");
+            this.$parent.changeLanguage("zh-hans");
         }
     }
 }
